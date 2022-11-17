@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CV generator</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <!-- form part -->
+            <div class="inputs">
+                <!-- peronal info inputs -->
+                <form action="#">
+                    <h5 class="contact">Contact details</h5>
+
+                    <div class="form-group">
+                        <label for="full-name">Full name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="full-name"
+                            id="full-name"
+                            placeholder="Full name"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="prof-title">Professional title</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="prof-title"
+                            id="prof-title"
+                            placeholder="Professional title"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="address"
+                            id="address"
+                            placeholder="Stoke on Trent ST5 3GH"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            placeholder="john.smith@gmail.com"
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone number</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="phone"
+                            id="phone"
+                            placeholder="00123456789"
+                        />
+                    </div>
+                    <div class="form-group">
+                        <label for="github">Github</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            name="github"
+                            id="github"
+                            placeholder="github/abcdef"
+                        />
+                    </div>
+                </form>
+            </div>
+
+            <!-- cv preview part -->
+            <div class="cv-view">
+                <!-- personal info + contact details -->
+                <div class="cv-pers-info">
+                    <div class="cv-full-name-title">
+                        <h2 class="cv-full-name">John Smith</h2>
+                        <h3 class="cv-prof-title">web developer</h3>
+                    </div>
+                    <div class="cv-contact">
+                        <p class="cv-address"></p>
+                        <p class="cv-email"></p>
+                        <p class="cv-phone"></p>
+                        <p class="cv-github"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="app.js"></script>
+    </body>
+</html>

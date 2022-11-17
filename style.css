@@ -1,0 +1,33 @@
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+}
+.cv-view {
+    margin: 0;
+    width: 40%;
+    height: 100%;
+    aspect-ratio: 210/297;
+    font-size: 1vw;
+    padding: 1vw;
+    border: 1px solid black;
+}
+.cv-full-name {
+    font-size: 3vw;
+    margin: 0;
+}
+
+.cv-prof-title {
+    font-size: 2vw;
+    margin: 0;
+}
+.cv-pers-info {
+    display: flex;
+    justify-content: space-between;
+}
+.cv-contact {
+    font-size: 0.7vw;
+    text-align: end;
+}
+p {
+    margin: 0;
+}
