@@ -1,12 +1,14 @@
 const fullName = document.querySelector("#full-name");
 const cvFullName = document.querySelector(".cv-full-name");
 
+const profTitle = document.querySelector("#prof-title");
+const cvProfTitle = document.querySelector(".cv-prof-title");
+
 fullName.addEventListener("input", (e) => {
     cvFullName.textContent = fullName.value;
 });
 
-const profTitle = document.querySelector("#prof-title");
-const cvProfTitle = document.querySelector(".cv-prof-title");
+
 
 profTitle.addEventListener("input", (e) => {
     cvProfTitle.textContent = profTitle.value;
