@@ -21,7 +21,7 @@
                 <!-- peronal info inputs -->
                 <form action="#">
                     <h5 class="contact">Contact details</h5>
-
+                    <!-- Full name -->
                     <div class="form-group">
                         <label for="full-name">Full name</label>
                         <input
@@ -32,7 +32,7 @@
                             placeholder="Full name"
                         />
                     </div>
-
+                    <!-- Professional title input-->
                     <div class="form-group">
                         <label for="prof-title">Professional title</label>
                         <input
@@ -41,9 +41,10 @@
                             name="prof-title"
                             id="prof-title"
                             placeholder="Professional title"
+                            maxlength="30"
                         />
                     </div>
-
+                    <!-- Address input-->
                     <div class="form-group">
                         <label for="address">Address</label>
                         <input
@@ -52,20 +53,22 @@
                             name="address"
                             id="address"
                             placeholder="Stoke on Trent ST5 3GH"
+                            maxlength="30"
                         />
                     </div>
-
+                    <!-- Email input -->
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input
-                            type="text"
+                            type="email"
                             class="form-control"
                             name="email"
                             id="email"
                             placeholder="john.smith@gmail.com"
+                            maxlength="30"
                         />
                     </div>
-
+                    <!-- Phone number input -->
                     <div class="form-group">
                         <label for="phone">Phone number</label>
                         <input
@@ -74,16 +77,63 @@
                             name="phone"
                             id="phone"
                             placeholder="00123456789"
+                            maxlength="30"
                         />
                     </div>
+                    <!-- Web input -->
                     <div class="form-group">
-                        <label for="github">Github</label>
+                        <label for="web">Web</label>
                         <input
                             type="text"
                             class="form-control"
-                            name="github"
-                            id="github"
-                            placeholder="github/abcdef"
+                            name="web"
+                            id="web"
+                            placeholder="web/abcdef"
+                            maxlength="30"
+                        />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-secondary">
+                            Save
+                        </button>
+                    </div>
+                </form>
+                <form action="">
+                    <!-- Profile inpute -->
+                    <h5 class="profile">Profile</h5>
+                    <div class="form-group">
+                        <textarea
+                            name="profile"
+                            id="profile"
+                            class="form-control"
+                            maxlength="300"
+                            placeholder="Profile - max. 300"
+                            cols="30"
+                            rows="5"
+                        ></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-secondary">
+                            Save
+                        </button>
+                    </div>
+                </form>
+                <form action="">
+                    <div class="form-group">
+                        <label for="web">Start/end date</label>
+                        <input
+                            type="month"
+                            class="form-control"
+                            name="start-job"
+                            id="start-job"
+                            value="dfgsd"  
+                        />
+                        <input
+                            type="month"
+                            class="form-control"
+                            name="end-job"
+                            id="end-job"
+                            
                         />
                     </div>
                 </form>
@@ -91,17 +141,70 @@
 
             <!-- cv preview part -->
             <div class="cv-view">
-                <!-- personal info + contact details -->
+                <!-- Head of CV - personal info + contact details -->
                 <div class="cv-pers-info">
-                    <div class="cv-full-name-title">
+                    <!-- Ful name and professional title -right -->
+                    <div contenteditable="true" class="cv-full-name-title">
                         <h2 class="cv-full-name">John Smith</h2>
                         <h3 class="cv-prof-title">web developer</h3>
                     </div>
+                    <!-- Contact details - left -->
                     <div class="cv-contact">
                         <p class="cv-address"></p>
                         <p class="cv-email"></p>
                         <p class="cv-phone"></p>
-                        <p class="cv-github"></p>
+                        <p class="cv-web"></p>
+                    </div>
+                </div>
+                <!-- Main part of the CV -->
+                <div class="cv-main">
+                    <!-- Profile and experience - left sectionpart -->
+                    <div class="cv-profile-experiences">
+                        <div class="cv-profile-div">
+                            <h4>Profile</h4>
+                            <p class="cv-profile"></p>
+                        </div>
+                        <div class="cv-experiences">
+                            <h4>Experiences</h4>
+
+                            <div class="cv-start-job-div">
+                                <p class="cv-start-job"></p>
+                            </div>
+                            <div class="cv-end-job-div">
+                                <p class="cv-end-job"></p>
+                            </div>
+                            <div class="cv-job-title-div">
+                                <p class="cv-job-title"></p>
+                            </div>
+                            <div class="cv-employer">
+                                <p class="cv-employer"></p>
+                            </div>
+                            <div class="city-div">
+                                <p class="cv-city"></p>
+                            </div>
+                            <div class="cv-description-div">
+                                <p class="cv-description"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Education, Certificates, Skills, Languages - Right section -->
+                    <div class="cv-edu-cer-skill-lang">
+                        <!-- Education -->
+                        <div class="cv-education">
+                            <h4>Education</h4>
+                        </div>
+                        <!-- Certificates -->
+                        <div class="cv-certificates">
+                            <h4>Certificates</h4>
+                        </div>
+                        <!-- Skills -->
+                        <div class="cv-skills">
+                            <h4>Skills</h4>
+                        </div>
+                        <!-- Languages -->
+                        <div class="cv-languages">
+                            <h4>Languages</h4>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,44 +1,60 @@
-const fullName = document.querySelector("#full-name");
-const cvFullName = document.querySelector(".cv-full-name");
+// // contact details in CV
+// const fullName = document.querySelector("#full-name");
+// const cvFullName = document.querySelector(".cv-full-name");
 
-const profTitle = document.querySelector("#prof-title");
-const cvProfTitle = document.querySelector(".cv-prof-title");
+// const profTitle = document.querySelector("#prof-title");
+// const cvProfTitle = document.querySelector(".cv-prof-title");
 
-fullName.addEventListener("input", (e) => {
-    cvFullName.textContent = fullName.value;
-});
+// const address = document.querySelector("#address");
+// const cvAddress = document.querySelector(".cv-address");
 
+// const email = document.querySelector("#email");
+// const cvEmail = document.querySelector(".cv-email");
 
+// const phone = document.querySelector("#phone");
+// const cvPhone = document.querySelector(".cv-phone");
 
-profTitle.addEventListener("input", (e) => {
-    cvProfTitle.textContent = profTitle.value;
-});
+// const web = document.querySelector("#web");
+// const cvWeb = document.querySelector(".cv-web");
 
-const address = document.querySelector("#address");
-const cvAddress = document.querySelector(".cv-address");
+// fullName.addEventListener("input", (e) => {
+//     cvFullName.textContent = fullName.value;
+// });
 
-address.addEventListener("input", (e) => {
-    cvAddress.textContent = address.value;
-});
+// profTitle.addEventListener("input", (e) => {
+//     cvProfTitle.textContent = profTitle.value;
+// });
 
-const email = document.querySelector("#email");
-const cvEmail = document.querySelector(".cv-email");
+// address.addEventListener("input", (e) => {
+//     cvAddress.textContent = address.value;
+// });
 
-email.addEventListener("input", (e) => {
-    cvEmail.textContent = email.value;
-});
+// email.addEventListener("input", (e) => {
+//     cvEmail.textContent = email.value;
+// });
 
-const phone = document.querySelector("#phone");
-const cvPhone = document.querySelector(".cv-phone");
+// phone.addEventListener("input", (e) => {
+//     cvPhone.innerHTML = phone.value + " "+"&#9743";
+// });
 
-phone.addEventListener("input", (e) => {
-    cvPhone.textContent = phone.value;
-});
+// web.addEventListener("input", (e) => {
+//     cvWeb.textContent = web.value;
+// });
 
-const github = document.querySelector("#github");
-const cvGithub = document.querySelector(".cv-github");
+// // profile
+// const profile = document.querySelector("#profile");
+// const cvProfile = document.querySelector(".cv-profile-p");
 
-github.addEventListener("input", (e) => {
-    cvGithub.textContent = github.value;
-});
+// profile.addEventListener("input", (e) => {
+//     cvProfile.textContent = profile.value;
+// });
 
+const inputs = [...document.querySelectorAll("input, textarea")];
+
+for (let input of inputs) {
+    input.addEventListener("input", (e) => {
+        const outp = document.querySelector;
+        document.querySelector(`.cv-${e.target.id}`).textContent =
+            e.target.value;
+    });
+}

@@ -1,33 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .container-fluid {
     display: flex;
     justify-content: space-between;
+    margin-top: 1vw;
 }
+
+/* -------------------CV css------------------------ */
 .cv-view {
-    margin: 0;
     width: 40%;
     height: 100%;
     aspect-ratio: 210/297;
-    font-size: 1vw;
-    padding: 1vw;
+    padding: 0.5vw;
     border: 1px solid black;
-}
-.cv-full-name {
-    font-size: 3vw;
-    margin: 0;
+    background-color: grey;
 }
 
-.cv-prof-title {
-    font-size: 2vw;
-    margin: 0;
-}
+/*--- Top section of the CV ---*/
 .cv-pers-info {
     display: flex;
     justify-content: space-between;
 }
-.cv-contact {
-    font-size: 0.7vw;
-    text-align: end;
+
+/* Full name and job title */
+
+.cv-full-name-title {
+    width: 70%;
 }
-p {
+
+.cv-full-name {
     margin: 0;
+}
+
+h2 {
+    font-size: 3vw;
+  
+}
+
+h3 {
+    font-size: 2vw;
+}
+
+/* Contact details */
+.cv-edu-cer-skill-lang {
+    width: 40%;
+}
+.cv-contact {
+    text-align: end;
+    margin-top: 1vw;
+}
+
+.cv-contact p {
+    font-size: 1vw;
+}
+
+/* --- Main section of CV ---*/
+.cv-main {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1vw;
+    background-color: yellow;
+    height: 100%;
+}
+
+h4 {
+    font-size: 2vw;
+    border-bottom: 1px black solid;
+    margin: 1vw;
+    padding-left: 1vw;
+    padding-bottom: 0.5vw;
+}
+
+p {
+    font-size: 1vw;
+    margin: 0;
+    margin-left: 1.5vw;
+}
+
+/*-- Left section of CV -- */
+.cv-profile-experiences {
+    background-color: green;
+    width: 60%;
+    margin: 0.5vw;
+    border-right: 1px solid black;
+}
+
+/* Profile */
+
+/* ------------------ Input section ----------------- */
+.inputs {
+    width: 58%;
 }
