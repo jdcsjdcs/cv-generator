@@ -3,10 +3,10 @@
     padding: 0;
 }
 
-.container-fluid {
+.main-page {
     display: flex;
     justify-content: space-between;
-    margin-top: 1vw;
+    margin: 1vw 1vw 0 0;
 }
 
 /* -------------------CV css------------------------ */
@@ -36,12 +36,12 @@
 }
 
 h2 {
-    font-size: 3vw;
+    font-size: 2vw;
   
 }
 
 h3 {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 /* Contact details */
@@ -54,7 +54,7 @@ h3 {
 }
 
 .cv-contact p {
-    font-size: 1vw;
+    font-size: 0.7vw;
 }
 
 /* --- Main section of CV ---*/
@@ -67,7 +67,7 @@ h3 {
 }
 
 h4 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     border-bottom: 1px black solid;
     margin: 1vw;
     padding-left: 1vw;
@@ -75,14 +75,14 @@ h4 {
 }
 
 p {
-    font-size: 1vw;
+    font-size: 0.7vw;
     margin: 0;
     margin-left: 1.5vw;
 }
 
 /*-- Left section of CV -- */
 .cv-profile-experiences {
-    background-color: green;
+    background-color: gold;
     width: 60%;
     margin: 0.5vw;
     border-right: 1px solid black;

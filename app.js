@@ -48,13 +48,75 @@
 // profile.addEventListener("input", (e) => {
 //     cvProfile.textContent = profile.value;
 // });
+// const experiences = document.querySelector(".experiences");
+// const addJobBtn = document.querySelector("#add-job");
+// const cvExperiences = document.querySelector(".cv-experiences");
+
+// addJobBtn.addEventListener("click", (e) => {
+//     e.preventDefault();
+//     let copy = experiences.cloneNode(true);
+
+//     copy.querySelector("#job-title").id = 'job-title-b'
+//     experiences.after(copy);
+
+//     let cvCopy = cvExperiences.cloneNode(true);
+
+//     cvCopy.querySelector("#cv-job-title").id = "cv-job-title-b"
+//     cvExperiences.after(cvCopy);
+
+// });
 
 const inputs = [...document.querySelectorAll("input, textarea")];
+let inputList = {};
+console.log(inputList);
+
+let savedList = JSON.parse(localStorage.getItem("inputList"));
+inputList = savedList;
+
+for (let savedListValue in savedList) {
+    document.querySelector(`#cv-${savedListValue}`).innerHTML =
+        savedList[savedListValue];
+}
 
 for (let input of inputs) {
     input.addEventListener("input", (e) => {
-        const outp = document.querySelector;
-        document.querySelector(`.cv-${e.target.id}`).textContent =
-            e.target.value;
+        let inputId = e.target.id;
+        let cvInput = document.querySelector(`#cv-${inputId}`);
+        cvInput.innerHTML = e.target.value;
+
+        inputList[inputId] = e.target.value;
+
+        if (inputId === "phone") {
+            input.append(" ☏");
+        }
+        if (inputId === "email") {
+            input.append(" ✉");
+        }
+        if (inputId === "address") {
+            input.append(" ");
+        }
+        if (inputId === "web") {
+            input.append(" 🌐");
+        }
     });
 }
+
+const saveBtn = document.querySelector("#save-btn");
+saveBtn.addEventListener("click", (e) => {
+    localStorage.setItem("inputList", JSON.stringify(inputList));
+});
+
+
+const cv = document.querySelector('.cv-view').innerHTML
+
+
+function printCertificate() {
+    let printContents = document.querySelector('.cv-view').innerHTML;
+    
+    let originalContents = document.body.innerHTML;
+    document.body.innerHTML = printContents;
+    print();
+    document.body.innerHTML = originalContents;
+}
+
+printCertificate
