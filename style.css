@@ -23,6 +23,7 @@
 .cv-pers-info {
     display: flex;
     justify-content: space-between;
+    margin: 0.5vw;
 }
 
 /* Full name and job title */
@@ -37,11 +38,15 @@
 
 h2 {
     font-size: 2vw;
+    margin: 0;
+    
   
 }
 
 h3 {
     font-size: 1.5vw;
+    margin: 0 
+   
 }
 
 /* Contact details */
@@ -51,6 +56,7 @@ h3 {
 .cv-contact {
     text-align: end;
     margin-top: 1vw;
+    line-height: normal;
 }
 
 .cv-contact p {
@@ -75,7 +81,7 @@ h4 {
 }
 
 p {
-    font-size: 0.7vw;
+    font-size: 0.8vw;
     margin: 0;
     margin-left: 1.5vw;
 }
@@ -86,11 +92,23 @@ p {
     width: 60%;
     margin: 0.5vw;
     border-right: 1px solid black;
+    padding-right: 0.5vw;
+}
+/* Profile */
+
+/*-- Right section of CV -- */
+
+.cv-edu-cer-skill-lang {
+    background-color: brown;
+    margin:0.5vw 0.5vw 0.5vw 0 ;
+    
 }
 
-/* Profile */
+
 
 /* ------------------ Input section ----------------- */
 .inputs {
     width: 58%;
+    background-color: aqua;
 }
+
