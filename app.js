@@ -107,16 +107,3 @@ saveBtn.addEventListener("click", (e) => {
 });
 
 
-const cv = document.querySelector('.cv-view').innerHTML
-
-
-function printCertificate() {
-    let printContents = document.querySelector('.cv-view').innerHTML;
-    
-    let originalContents = document.body.innerHTML;
-    document.body.innerHTML = printContents;
-    print();
-    document.body.innerHTML = originalContents;
-}
-
-printCertificate
