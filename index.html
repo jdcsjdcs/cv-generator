@@ -1,288 +1,387 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>CV generator</title>
-        <link
-            rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-            crossorigin="anonymous"
-        />
-        <link rel="stylesheet" href="style.css" />
-    </head>
 
-    <body>
-        <div class="main-page">
-            <!-- form part -->
-            <div class="inputs container-fluid">
-                <!-- peronal info inputs -->
-                <form action="#" class="row">
-                    <h5 class="contact col-12">Contact details</h5>
-                    <!-- Full name -->
-                    <div class="form-group col-6">
-                        <label for="full-name">Full name</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="full-name"
-                            id="full-name"
-                            placeholder="Full name"
-                        />
-                    </div>
-                    <!-- Professional title input-->
-                    <div class="form-group col-6">
-                        <label for="prof-title">Professional title</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="prof-title"
-                            id="prof-title"
-                            placeholder="Professional title"
-                            maxlength="30"
-                        />
-                    </div>
-                    <!-- Address input-->
-                    <div class="form-group col-3">
-                        <label for="address">Address</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="address"
-                            id="address"
-                            placeholder="Stoke on Trent ST5 3GH"
-                            maxlength="30"
-                        />
-                    </div>
-                    <!-- Email input -->
-                    <div class="form-group col-3">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            class="form-control form-control-sm"
-                            name="email"
-                            id="email"
-                            placeholder="john.smith@gmail.com"
-                            maxlength="30"
-                        />
-                    </div>
-                    <!-- Phone number input -->
-                    <div class="form-group col-3">
-                        <label for="phone">Phone number</label>
-                        <input
-                            type="number"
-                            class="form-control form-control-sm"
-                            name="phone"
-                            id="phone"
-                            placeholder="00123456789"
-                            maxlength="30"
-                        />
-                    </div>
-                    <!-- Web input -->
-                    <div class="form-group col-3">
-                        <label for="web">Web</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="web"
-                            id="web"
-                            placeholder="web/abcdef"
-                            maxlength="30"
-                        />
-                    </div>
-                    <!-- <div class="col-12">
-                        <button type="submit" class="btn btn-secondary mb-4 ">
-                            Save
-                        </button>
-                    </div> -->
-                </form>
-                <form action="">
-                    <!-- Profile inpute -->
-                    <h5 class="profile">Profile</h5>
-                    <div class="form-group">
-                        <textarea
-                            name="profile"
-                            id="profile"
-                            class="form-control form-control-sm"
-                            maxlength="300"
-                            placeholder="Profile - max. 300"
-                            cols="30"
-                            rows="5"
-                        ></textarea>
-                    </div>
-                    <!-- <div>
-                        <button type="submit" class="btn btn-secondary mb-4">
-                            Save
-                        </button>
-                    </div> -->
-                </form>
-                <h5>Experiences</h5>
-                <form class="experiences row"" action="">
-                    
-                    <div class="form-group col-2">
-                        <label for="job-end">Start date</label>
-                        <input
-                            type="month"
-                            class="form-control form-control-sm"
-                            name="job-start"
-                            id="job-start"
-                         
-                        />
-                    </div>
-                    <div class="form-group col-2">
-                        <label for="job-end">End date</label>
-                        <input
-                            type="month"
-                            class="form-control form-control-sm"
-                            name="job-end"
-                            id="job-end"
-                            
-                        />
-                    </div>
-                    <div class="form-group col-3">
-                        <label for="web">Job title</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="job-title"
-                            id="job-title"
-                            placeholder="afdgad"
-                            maxlength="30"
-                        />
-                    </div>
-                    <div class="form-group col-3">
-                        <label for="web">Employer</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="employer"
-                            id="employer"
-                            placeholder="afdgad"
-                            maxlength="30"
-                        />
-                    </div>
-                    <div class="form-group col-2">
-                        <label for="web">City</label>
-                        <input
-                            type="text"
-                            class="form-control form-control-sm"
-                            name="city"
-                            id="city"
-                            placeholder="afdgad"
-                            maxlength="30"
-                        />
-                    </div>
-                    <div class="form-group col-12">
-                        <label for="">Job descdescription</label>
-                        <textarea
-                            name="description"
-                            id="description"
-                            class="form-control form-control-sm"
-                            maxlength="300"
-                            placeholder="description - max. 300"
-                            cols="30"
-                            rows="3"
-                        ></textarea>
-                    </div>
-                    
-                   
-                    
-                </form>
-              
-                <div class=>
-                    <button id="add-job" type="submit" class="btn-sm btn btn-secondary">
-                        Add more
-                    </button>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CV generator</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-page">
+        <!-- form part -->
+        <div class="inputs container">
+            <h5>Contact details</h5>
+            <!-- peronal info inputs -->
+            <form action="#" class="contact row">
+
+                <!-- Full name -->
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="full-name">Full name</label>
+                    <input type="text" class="form-control form-control-sm" name="full-name" id="full-name"
+                        placeholder="John Smith"  maxlength="18" />
+                </div>
+
+                <!-- Professional title input-->
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="prof-title">Professional title</label>
+                    <input type="text" class="form-control form-control-sm" name="prof-title" id="prof-title"
+                        placeholder="Web developer" maxlength="25" />
+                </div>
+
+                <!-- Address input-->
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="address">Address</label>
+                    <input type="text" class="form-control form-control-sm" name="address" id="address"
+                        placeholder="AB12 3CD City" maxlength="20" />
+                </div>
+                <!-- Email input -->
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control form-control-sm" name="email" id="email"
+                        placeholder="john.smith@gmail.com" maxlength="20" />
+                </div>
+                <!-- Phone number input -->
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="phone">Phone</label>
+                    <input type="tel" class="form-control form-control-sm" name="phone" id="phone"
+                        placeholder="00123456789" maxlength="20" />
+                </div>
+                <!-- Web input -->
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="web">Web</label>
+                    <input type="text" class="form-control form-control-sm" name="web" id="web" placeholder="web/abcdef"
+                        maxlength="20" />
                 </div>
                 
+            </form>
+
+            <h5 class="">Profile</h5>
+            <form class="profile row" action="">
+
+                <!-- Profile input -->
+                <div class=" form-group col-sm">
+                    <textarea name="profile" id="profile" class="form-control form-control-sm" maxlength="300"
+                        placeholder="Profile - max. 300" col-sms="30" rows="5"></textarea>
+                </div>
+               
+            </form>
+
+            <h5>Experiences</h5>
+            <!-- Experiences -->
+            <div class="exp">
+            <form id="experiences" class="experiences row" action="">
+                <!-- job start and and date -->
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="job-end">Start date</label>
+                    <input data-id="experiences" type="month" class="form-control form-control-sm" name="job-start"
+                        id="job-start" />
+                </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="job-end">End date</label>
+                    <input data-id="experiences" type="month" class="form-control form-control-sm" name="job-end"
+                        id="job-end" />
+                </div>
+                <!-- Job title -->
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="web">Job title</label>
+                    <input data-id="experiences" type="text" class="form-control form-control-sm" name="job-title"
+                        id="job-title" placeholder="Web developer" maxlength="25" />
+                </div>
+                <!-- Employer -->
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="web">Employer</label>
+                    <input data-id="experiences" type="text" class="form-control form-control-sm" name="employer"
+                        id="employer" placeholder="MI6" maxlength="25" />
+                </div>
+                <!-- city -->
+                <div class="form-group col-lg-6 col-sm-12">
+                    <label for="web">City</label>
+                    <input data-id="experiences" type="text" class="form-control form-control-sm" name="city" id="city"
+                        placeholder="London" maxlength="10" />
+                </div>
+                <!-- Job description -->
+                <div class="form-group col-lg-12">
+                    <label for="">Job description</label>
+                    <textarea data-id="experiences" name="description" id="description"
+                        class="form-control form-control-sm" maxlength="300" placeholder="description - max. 300"
+                        col-sms="30" rows="3"></textarea>
+                </div>
+
+            </form>
+            </div>
+            <!-- Add more experience button -->
+            <div class="add-exp-btn">
+                <button id="add-job" type="submit" class="btn-sm btn btn-secondary">
+                    Add more
+                </button>
             </div>
 
-            <!-- CV preview part -->
-            <div class="cv-view ">
-                <!-- Head of CV - personal info + contact details -->
-                <div class="cv-pers-info">
-                    <!-- Ful name and professional title -right -->
-                    <div contenteditable="true" class="cv-full-name-title">
-                        <h2 id="cv-full-name">John Smith</h2>
-                        <h3 id="cv-prof-title">web developer</h3>
-                    </div>
-                    <!-- Contact details - left -->
-                    <div class="cv-contact">
-                        <p id="cv-address"></p>
-                        <p id="cv-email"></p>
-                        <p id="cv-phone"></p>
-                        <p id="cv-web"></p>
-                    </div>
+            <h5>Education</h5>
+            <!-- Education inputs -->
+            <div class="edu">
+            <form class="education row"" action="">
+                 <!--Education start and end date  -->
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="education-start">Start date</label>
+                    <input type="month" class="form-control form-control-sm" name="education-start" id="education-start" />
                 </div>
-                <!-- Main part of the CV -->
-                <div class="cv-main">
-                    <!-- Profile and experience - left sectionpart -->
-                    <div class="cv-profile-experiences">
-                        <div class="cv-profile-div">
-                            <h4>Profile</h4>
-                            <p id="cv-profile"></p>
-                        </div>
-
-                        <h4>Experiences</h4>
-                        <div  class="cv-experiences">
-                            
-
-                            <div class="cv-job-start-div">
-                                <p id="cv-job-start"></p>
-                            </div>
-                            <div class="cv-job-end-div">
-                                <p id="cv-job-end"></p>
-                            </div>
-                            <div class="cv-job-title-div">
-                                <p id="cv-job-title">123</p>
-                            </div>
-                            <div class="cv-employer-div">
-                                <p id="cv-employer"></p>
-                            </div>
-                            <div class="city-div">
-                                <p id="cv-city"></p>
-                            </div>
-                            <div class="cv-description-div">
-                                <p id="cv-description"></p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Education, Certificates, Skills, Languages - Right section -->
-                    <div class="cv-edu-cer-skill-lang">
-                        <!-- Education -->
-                        <div class="cv-education">
-                            <h4>Education</h4>
-                        </div>
-                        <!-- Certificates -->
-                        <div class="cv-certificates">
-                            <h4>Certificates</h4>
-                        </div>
-                        <!-- Skills -->
-                        <div class="cv-skills">
-                            <h4>Skills</h4>
-                        </div>
-                        <!-- Languages -->
-                        <div class="cv-languages">
-                            <h4>Languages</h4>
-                        </div>
-                    </div>
+                <div class="form-group col-lg-3 col-sm-6">
+                    <label for="education-end">End date</label>
+                    <input type="month" class="form-control form-control-sm" name="education-end" id="education-end" />
                 </div>
-                <div class="save-btn">
-                    <button id="save-btn" type="submit" class="btn-sm btn btn-secondary">
-                        Save
-                    </button>
+                <!-- Qualification -->
+                <div class="form-group col-lg-6">
+                    <label for="qualification">Qualification</label>
+                    <input type="text" class="form-control form-control-sm" name="qualification" id="qualification" 
+                        placeholder="Web developer" maxlength="20" />
                 </div>
-
-                <div class="print-btn">
-                    <button id="print-btn" onclick="window.print()" type="submit" class="btn-sm btn btn-secondary">
-                        Print
-                    </button>
+                <!-- Institution -->
+                <div class="form-group col-lg-12">
+                    <label for="institution">Institution</label>
+                    <input type="text" class="form-control form-control-sm" name="institution" id="institution" placeholder="University of Bath"
+                        maxlength="20" />
                 </div>
+                </div>
+            </form>
+            <!-- Add more education button -->
+            <div class="add-education-btn">
+                <button id="add-education" type="submit" class="btn-sm btn btn-secondary">
+                    Add more
+                </button>
             </div>
+            
+            <h5>Certificates</h5>
+
+          
+            <!-- certificates inputs -->
+            <div class="cer">
+            <form class="certificates row"" action="">
+                <!-- Certificates title -->
+                <div class="form-group col-sm-6">
+                    <label for="certificates-title">Title</label>
+                    <input type="text" class="form-control form-control-sm" name="certificates-title" id="certificates-title"
+                        placeholder="Web/dev bootcamp" maxlength="40" />
+                </div>
+                <!-- Institution -->
+                <div class="form-group col-sm-6">
+                    <label for="certificates-issued">Institution</label>
+                    <input type="text" class="form-control form-control-sm" name="certificates-issued" id="certificates-issued" placeholder="University of Bath"
+                        maxlength="20" />
+                </div>
+            </form>
+            </div>
+            <!-- Add more certificates button -->
+            <div class="add-certificates-btn">
+                <button id="add-certificates" type="submit" class="btn-sm btn btn-secondary">
+                    Add more
+                </button>
+            </div>
+
+            <h5>Skills</h5>
+            <!-- Skills input -->
+            <div class="sk">
+            <form class="skills row" action="">
+
+                <div class=" form-group col-sm-12">
+                    <label for="skill"></label>
+                    <input type="text" class="form-control form-control-sm" name="skill" id="skill" placeholder="HTML/CSS/JS"
+                    maxlength="25"/>
+                </div>
+
+            </form>
+            </div>
+             <!-- Add more skills button -->
+            <div class="add-skills-btn">
+                <button id="add-skills" type="submit" class="btn-sm btn btn-secondary">
+                    Add more
+                </button>
+            </div>
+
+            <h5>Languages</h5>
+            <!-- Languages inputs -->
+            <div class="lang">
+            <form class="languages row"" action=""languages -->
+                <div class="form-group col-sm-6">
+                    <label for="languages">Language</label>
+                    <input type="text" class="form-control form-control-sm" name="language" id="language"
+                        placeholder="English" maxlength="30" />
+                </div>
+                <!-- Level -->
+                <div class="form-group col-sm-6">
+                    <label for="level">Level</label>
+                    <input type="text" class="form-control form-control-sm" name="level" id="level" placeholder="Native"
+                        maxlength="30" />
+                </div>
+            </form>
+            </div>
+            <!-- Add more certification button -->
+            <div class="add-languages-btn">
+                <button id="add-languages" type="submit" class="btn-sm btn btn-secondary">
+                    Add more
+                </button>
+            </div>
+
         </div>
+    
+        
+        <!-- CV preview part -->
+        <div class="cv-view " contenteditable="true">
+            <!-- Head of CV - personal info + contact details -->
+            <div class="cv-pers-info">
+                <!-- Ful name and professional title -right -->
+                <div class="cv-full-name-title">
+                    <h2 id="cv-full-name"></h2>
+                    <h3 id="cv-prof-title"></h3>
+                </div>
+                <!-- Contact details - left -->
+                <div class="cv-contact">
+                    <p id="cv-address"></p>
+                    <p id="cv-email"></p>
+                    <p id="cv-phone"></p>
+                    <p id="cv-web"></p>
+                </div>
+            </div>
+            <!-- Main part of the CV -->
+            <div class="cv-main">
+                <!-- Profile and experience - left section -->
+                <div class="cv-profile-experiences">
+                    <h4>PROFILE</h4>
+                    <div class="cv-profile-div">
+                        <p id="cv-profile"></p>
+                    </div>
 
-        <script src="app.js"></script>
-    </body>
+                    <h4>EXPERIENCES</h4>
+                    <div class="cv-exp">
+                    <div class="cv-experiences">
+                        <div>
+                            <div class="cv-job-date-div">
+                                <div class="cv-job-start-div">
+                                    <p id="cv-job-start"></p>
+                                </div>
+                                <div class="cv-job-end-div">
+                                    <p id="cv-job-end"></p>
+                                </div>
+                            </div>
+
+                            <div class="cv-employer-city-title-div">
+                                <div class="cv-employer-city-div">
+                                    <div class="cv-employer-div">
+                                        <p id="cv-employer"></p>
+                                    </div>
+                                    <div class="cv-city-div">
+                                        <p id="cv-city"></p>
+                                    </div>
+                                </div>
+
+                                <div class="cv-job-title-div">
+                                    <p id="cv-job-title"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cv-description-div">
+                            <p id="cv-description"></p>
+                        </div>
+
+                    </div>
+                </div>
+                </div>
+
+                <!-- Education, Certificates, Skills, Languages - Right section -->
+                <div class="cv-edu-cer-skill-lang">
+                    <!-- Education -->
+                    <h4>EDUCATION</h4>
+                    <div class="cv-edu">
+                    <div class="cv-education">
+
+                        <div class="cv-education-date-div">
+                            <div class="cv-education-start-div">
+                                <p id="cv-education-start"></p>
+                            </div>
+                            <div class="cv-education-end-div">
+                                <p id="cv-education-end"></p>
+                            </div>
+                        </div>
+
+                        <div class="cv-institution-div">
+                            <div class="cv-institution-div">
+                                <p id="cv-institution"></p>
+                            </div>
+
+                            <div class="cv-qualification-div">
+                                <p id="cv-qualification"></p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    </div>
+
+                    <h4>CERTIFICATES</h4>
+                    <!-- Certificates -->
+                    <div class="cv-cer">
+                    <div class="cv-certificates">
+                        <div class="cv-certificates-title-div">
+                            <p id="cv-certificates-title"></p>
+                        </div>
+
+                        <div class="cv-certificates-issued-div">
+                            <p id="cv-certificates-issued"></p>
+                        </div>        
+                    </div>
+                    </div>
+                    <!-- Skills -->
+                    <h4>SKILLS</h4>
+                    <div class="cv-sk">
+                    <div class="cv-skills">                             
+                        <p id="cv-skill"></p>
+                    </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <h4>LANGUAGES</h4>
+                    <div class="cv-lang">
+                    <div class="cv-languages">
+                        
+                            <div class="cv-languages-div">
+                                <p id="cv-language"></p>
+                            </div>
+        
+                            <div class="cv-level-div">
+                                <p id="cv-level"></p>
+                            </div>        
+                        
+                    </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+      
+        <div class="save-print-btn-div">
+            <button id="save-btn" type="submit" class="btn-sm btn btn-secondary">
+                Save
+            </button>
+
+            <button id="print-btn" onclick="window.print()" type="submit" class="btn-sm btn btn-secondary">
+                Print
+            </button>
+
+            <button id="preview-btn" onclick="preview()" type="submit" class="btn-sm btn btn-secondary">
+                Preview
+            </button>
+
+        </div>
+        
+
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
 </html>
