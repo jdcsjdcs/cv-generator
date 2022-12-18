@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CV generator</title>
+    <title>CV builder</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
@@ -14,8 +14,10 @@
 
 <body>
     <div class="main-page">
-        <!-- form part -->
+        <!-------------------------------- form part -------------------------------------------------->
+        
         <div class="inputs container">
+            <h1>CV builder</h1>
             <h5>Contact details</h5>
             <!-- peronal info inputs -->
             <form action="#" class="contact row">
@@ -38,25 +40,25 @@
                 <div class="form-group col-lg-3 col-sm-6">
                     <label for="address">Address</label>
                     <input type="text" class="form-control form-control-sm" name="address" id="address"
-                        placeholder="AB12 3CD City" maxlength="20" />
+                        placeholder="AB12 3CD City" maxlength="22" />
                 </div>
                 <!-- Email input -->
                 <div class="form-group col-lg-3 col-sm-6">
                     <label for="email">Email</label>
                     <input type="email" class="form-control form-control-sm" name="email" id="email"
-                        placeholder="john.smith@gmail.com" maxlength="20" />
+                        placeholder="john.smith@gmail.com" maxlength="23" />
                 </div>
                 <!-- Phone number input -->
                 <div class="form-group col-lg-3 col-sm-6">
                     <label for="phone">Phone</label>
                     <input type="tel" class="form-control form-control-sm" name="phone" id="phone"
-                        placeholder="00123456789" maxlength="20" />
+                        placeholder="00123456789" maxlength="22" />
                 </div>
                 <!-- Web input -->
                 <div class="form-group col-lg-3 col-sm-6">
                     <label for="web">Web</label>
                     <input type="text" class="form-control form-control-sm" name="web" id="web" placeholder="web/abcdef"
-                        maxlength="20" />
+                        maxlength="22" />
                 </div>
                 
             </form>
@@ -139,13 +141,13 @@
                 <div class="form-group col-lg-6">
                     <label for="qualification">Qualification</label>
                     <input type="text" class="form-control form-control-sm" name="qualification" id="qualification" 
-                        placeholder="Web developer" maxlength="20" />
+                        placeholder="Web developer" maxlength="25" />
                 </div>
                 <!-- Institution -->
                 <div class="form-group col-lg-12">
                     <label for="institution">Institution</label>
                     <input type="text" class="form-control form-control-sm" name="institution" id="institution" placeholder="University of Bath"
-                        maxlength="20" />
+                        maxlength="25" />
                 </div>
                 </div>
             </form>
@@ -166,13 +168,13 @@
                 <div class="form-group col-sm-6">
                     <label for="certificates-title">Title</label>
                     <input type="text" class="form-control form-control-sm" name="certificates-title" id="certificates-title"
-                        placeholder="Web/dev bootcamp" maxlength="40" />
+                        placeholder="Web/dev bootcamp" maxlength="18" />
                 </div>
                 <!-- Institution -->
                 <div class="form-group col-sm-6">
                     <label for="certificates-issued">Institution</label>
                     <input type="text" class="form-control form-control-sm" name="certificates-issued" id="certificates-issued" placeholder="University of Bath"
-                        maxlength="20" />
+                        maxlength="10" />
                 </div>
             </form>
             </div>
@@ -208,7 +210,7 @@
             <div class="lang">
             <form class="languages row"" action=""languages -->
                 <div class="form-group col-sm-6">
-                    <label for="languages">Language</label>
+                    <label for="language">Language</label>
                     <input type="text" class="form-control form-control-sm" name="language" id="language"
                         placeholder="English" maxlength="30" />
                 </div>
@@ -220,6 +222,7 @@
                 </div>
             </form>
             </div>
+            
             <!-- Add more certification button -->
             <div class="add-languages-btn">
                 <button id="add-languages" type="submit" class="btn-sm btn btn-secondary">
@@ -227,16 +230,59 @@
                 </button>
             </div>
 
+            <h1>Costumise</h1>
+            <h5>Colors</h5>
+            <form class="colors row" action="">
+
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="background-color">Background</label>
+                    <input type="color" class="form-control form-control-sm" name="background-color" id="cv-view"/>
+                </div>
+
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="left-section">Left section</label>
+                    <input type="color" class="form-control form-control-sm" name="left-section" id="cv-profile-experiences"/>
+                </div>
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="right-section">Right section</label>
+                    <input type="color" class="form-control form-control-sm" name="right-section" id="cv-edu-cer-skill-lang"/>
+                </div>
+                <div class=" form-group col-lg-3 col-sm-6">
+                    <label for="header">Header</label>
+                    <input type="color" class="form-control form-control-sm" name="header" id="cv-pers-info"/>
+                </div>
+
+            </form>
+            <h5>Fonts</h5>
+            <form class="colors row" action="">
+
+                <div class=" form-group col-sm-12">
+                    <label for="font">Font-family</label>
+                    <select id="font" class="form-select form-control form-control-sm" aria-label="Default select example">
+                        <option selected>Roboto Mono</option>
+                        <option value="Courier New, Courier">Courier New</option>
+                        <option value="Arial">Arial</option>
+                        <option value="Calibri">Calibri</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="cursive">cursive</option>
+                        
+                      </select>
+                </div>
+
+            </form>
+
         </div>
     
         
-        <!-- CV preview part -->
-        <div class="cv-view " contenteditable="true">
+        <!------------------------------------------ CV preview part --------------------------------->
+        
+        <div class="cv-view"  contenteditable="true">
             <!-- Head of CV - personal info + contact details -->
             <div class="cv-pers-info">
                 <!-- Ful name and professional title -right -->
                 <div class="cv-full-name-title">
-                    <h2 id="cv-full-name"></h2>
+                    <h2 class="full-name" id="cv-full-name"></h2>
                     <h3 id="cv-prof-title"></h3>
                 </div>
                 <!-- Contact details - left -->
@@ -258,38 +304,39 @@
 
                     <h4>EXPERIENCES</h4>
                     <div class="cv-exp">
-                    <div class="cv-experiences">
-                        <div>
-                            <div class="cv-job-date-div">
-                                <div class="cv-job-start-div">
-                                    <p id="cv-job-start"></p>
-                                </div>
-                                <div class="cv-job-end-div">
-                                    <p id="cv-job-end"></p>
-                                </div>
-                            </div>
-
-                            <div class="cv-employer-city-title-div">
-                                <div class="cv-employer-city-div">
-                                    <div class="cv-employer-div">
-                                        <p id="cv-employer"></p>
+                        <div class="cv-experiences">
+                            <div>
+                                <div class="cv-job-date-div">
+                                    <div class="cv-job-start-div">
+                                        <p id="cv-job-start"></p>
                                     </div>
-                                    <div class="cv-city-div">
-                                        <p id="cv-city"></p>
+                                    <div class="cv-job-end-div">
+                                        <p id="cv-job-end"></p>
                                     </div>
                                 </div>
 
-                                <div class="cv-job-title-div">
-                                    <p id="cv-job-title"></p>
+                                <div class="cv-employer-city-title-div">
+                                    <div class="cv-employer-city-div">
+                                        <div class="cv-employer-div">
+                                            <p id="cv-employer"></p>
+                                        </div>
+                                        <div class="cv-city-div">
+                                            <p id="cv-city"></p>
+                                        </div>
+                                    </div>
+
+                                    <div class="cv-job-title-div">
+                                        <p id="cv-job-title"></p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="cv-description-div">
-                            <p id="cv-description"></p>
-                        </div>
+                            
+                            <div class="cv-description-div">
+                                <p id="cv-description"></p>
+                            </div>
 
+                        </div>
                     </div>
-                </div>
                 </div>
 
                 <!-- Education, Certificates, Skills, Languages - Right section -->
@@ -357,6 +404,7 @@
                             </div>        
                         
                     </div>
+                    
                     </div>
                 </div>
             </div>
