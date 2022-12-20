@@ -13,58 +13,52 @@ const write = () => {
             // inputs to the cv
             let cvInput = document.querySelector(`#cv-${e.target.id}`);
             cvInput.innerHTML = e.target.value;
-           
-           
+
             // to change format of date inputs
-            let dates = [...document. querySelectorAll('input[type=month]')]
-            if (dates.includes(input)){
-             
+            let dates = [...document.querySelectorAll('input[type=month]')]
+            if (dates.includes(input)) {
+
                 let [yyyy, mm] = e.target.value.split('-')
-                cvInput.innerHTML =  `${mm}/${yyyy}`
+                cvInput.innerHTML = `${mm}/${yyyy}`
                 // if date input cleared shows nothing(default is undefined)
-                if(e.target.value === ''){cvInput.innerHTML = ''}
-                
-                
+                if (e.target.value === '') { cvInput.innerHTML = '' }
             }
 
-             // add inputs to inputList object(key-input id, value-input value)
-             inputList[e.target.id] = e.target.value;
-            
+            // add inputs to inputList object(key-input id, value-input value)
+            inputList[e.target.id] = e.target.value;
+
             // add symbols to contacts
-            if (e.target.id === "phone") {cvInput.append(" ☏")}
-            if (e.target.id === "email") {cvInput.append(" ✉")}
-            if (e.target.id === "address") {cvInput.append(" 🖈")}
-            if (e.target.id === "web") {cvInput.append(" 🌐")}
+            if (e.target.id === "phone") { cvInput.append(" ☏") }
+            if (e.target.id === "email") { cvInput.append(" ✉") }
+            if (e.target.id === "address") { cvInput.append(" 🖈") }
+            if (e.target.id === "web") { cvInput.append(" 🌐") }
         });
     }
 };
-
 
 // to save data to localStorage
 const saveToLocStor = () => {
     const saveBtn = document.querySelector("#save-btn");
     saveBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    localStorage.setItem("saveList", JSON.stringify(inputList));
-     // save colors to locastorage
-    localStorage.setItem("saveColorList", JSON.stringify(colorList));
-    // save font-family to locastorage
-    localStorage.setItem("fonts", font.value);
-  
-});
+        e.preventDefault();
+        localStorage.setItem("saveList", JSON.stringify(inputList));
+        // save colors to locastorage
+        localStorage.setItem("saveColorList", JSON.stringify(colorList));
+        // save font-family to locastorage
+        localStorage.setItem("fonts", font.value);
+
+    });
 }
 
 // get all saved data from localStorage
 let getFromLocStor = () => {
     savedList = JSON.parse(localStorage.getItem("saveList"));
-    if (savedList !== null) {inputList = savedList}
+    if (savedList !== null) { inputList = savedList }
     // get all saved colors from localStorage
     savedColorList = JSON.parse(localStorage.getItem("saveColorList"));
-    if (savedColorList !== null) {colorList = savedColorList}
+    if (savedColorList !== null) { colorList = savedColorList }
     // get font-family from localStorage
     savedFont = localStorage.getItem('fonts')
-  
-
 }
 
 // add data back to elements
@@ -74,25 +68,25 @@ const dataBack = () => {
         document.querySelector(`#${savedListKey}`).value = savedList[savedListKey];
         // add formated date to cv element
         let cvInputId = document.querySelector(`#cv-${savedListKey}`)
-        if (savedListKey.includes('start') || savedListKey.includes('end')){
+        if (savedListKey.includes('start') || savedListKey.includes('end')) {
             let [yyyy, mm] = savedList[savedListKey].split('-')
-            
+
             cvInputId.innerHTML = `${mm}/${yyyy}`
             // if date is empty in cv shows nothing(default is undefined)
-            if (savedList[savedListKey] === '') {cvInputId.innerHTML = ''}
-           
-        } 
+            if (savedList[savedListKey] === '') { cvInputId.innerHTML = '' }
+
+        }
         else {
-             // add data back to cv-elements
+            // add data back to cv-elements
             cvInputId.innerHTML = savedList[savedListKey];
-            }
-            
+        }
+
         // add symbols back to cv-elements
-        if (savedListKey === "phone"){cvInputId.append(" ☏")}
-        if (savedListKey === "email"){cvInputId.append(" ✉")}
-        if (savedListKey === "address"){cvInputId.append(" 🖈")}
-        if (savedListKey === "web"){cvInputId.append(" 🌐")}
-               
+        if (savedListKey === "phone") { cvInputId.append(" ☏") }
+        if (savedListKey === "email") { cvInputId.append(" ✉") }
+        if (savedListKey === "address") { cvInputId.append(" 🖈") }
+        if (savedListKey === "web") { cvInputId.append(" 🌐") }
+
     }
     // add colors back to cv-elements
     for (let savedColorListKey in savedColorList) {
@@ -103,8 +97,8 @@ const dataBack = () => {
 }
 
 // to copy/clone element function
-let cloneElem = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, elem, cvElem, el, cvEl ) => { 
-    
+let cloneElem = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, elem, cvElem, el, cvEl) => {
+
     copyElem = elem.cloneNode(true);
     copyCvElem = cvElem.cloneNode(true);
 
@@ -114,7 +108,7 @@ let cloneElem = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, e
         // clearing cloned cv element content
         copyCvElem.querySelector(`#cv-${copyElemInput.id}`).innerHTML = "";
         // changing id of cloned cv elements
-        copyCvElem.querySelector(`#cv-${copyElemInput.id}`).id =`cv-${copyElemInput.id}` + `${copyNum}`;
+        copyCvElem.querySelector(`#cv-${copyElemInput.id}`).id = `cv-${copyElemInput.id}` + `${copyNum}`;
         // cleaning cloned input values
         copyElemInput.value = "";
         // changing id of cloned inputs
@@ -125,14 +119,13 @@ let cloneElem = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, e
 
     el.append(copyElem);
     cvEl.append(copyCvElem);
-    
+
     // to write inputs to cv and store all inputs to inputList object
     write();
 };
 
-
 // to retrieve cloned elements 
-const retrieveElement = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, elem, cvElem, el, cvEl ) =>{
+const retrieveElement = (copyElem, copyCvElem, copyElemInput, copyElemInputs, copyNum, elem, cvElem, el, cvEl) => {
     for (let j = 1; j <= copyNum; j++) {
         copyElem = elem.cloneNode(true);
         copyCvElem = cvElem.cloneNode(true);
@@ -141,8 +134,8 @@ const retrieveElement = (copyElem, copyCvElem, copyElemInput, copyElemInputs, co
 
         for (let copyElemInput of copyElemInputs) {
             // changing id of cloned cv elements
-            copyCvElem.querySelector(`#cv-${copyElemInput.id}`).id =`cv-${copyElemInput.id}` + `${j}`;
-            
+            copyCvElem.querySelector(`#cv-${copyElemInput.id}`).id = `cv-${copyElemInput.id}` + `${j}`;
+
             // changing id of cloned inputs
             copyElemInput.id = copyElemInput.id + `${j}`;
         }
@@ -153,7 +146,7 @@ const retrieveElement = (copyElem, copyCvElem, copyElemInput, copyElemInputs, co
         el.append(copyElem);
         cvEl.append(copyCvElem);
     }
-}   
+}
 
 // ----- costumise section ------
 
@@ -164,9 +157,9 @@ let savedColorList
 let colors = () => {
     for (colorInput of colorInputs) {
         colorInput.addEventListener('input', (e) => {
-    
+
             document.querySelector(`.${e.target.id}`).style.backgroundColor = e.target.value;
-    
+
             colorList[e.target.id] = e.target.value
         })
     }
@@ -176,10 +169,10 @@ let colors = () => {
 let font = document.querySelector('#font')
 let fontFamily = () => {
     font.addEventListener('input', (e) => {
-    document.querySelector('.cv-view').style.fontFamily = font.value
-    })}
+        document.querySelector('.cv-view').style.fontFamily = font.value
+    })
+}
 // ------------------------ / / / / /-------------------------------
-
 
 
 saveToLocStor()
@@ -193,18 +186,18 @@ const exp = document.querySelector(".exp");
 const cvExp = document.querySelector(".cv-exp");
 const addExpBtn = document.querySelector("#add-job");
 let expClones = 0;
-if (expCopyNum != null) {expClones = expCopyNum}
+if (expCopyNum != null) { expClones = expCopyNum }
 
-let copyExp, copyCvExp, copyExpInput, copyExpInputs 
+let copyExp, copyCvExp, copyExpInput, copyExpInputs
 
 addExpBtn.addEventListener("click", (e) => {
     expClones++;
 
     cloneElem(copyExp, copyCvExp, copyExpInput, copyExpInputs, expClones, experiences, cvExperiences, exp, cvExp)
 
-   // save number of copies to localStorage
+    // save number of copies to localStorage
     localStorage.setItem("expCopyNums", expClones);
-     
+
 });
 
 
@@ -217,9 +210,9 @@ const edu = document.querySelector(".edu");
 const cvEdu = document.querySelector(".cv-edu");
 const addEduBtn = document.querySelector("#add-education");
 let eduClones = 0;
-if (eduCopyNum != null) {eduClones = eduCopyNum}
+if (eduCopyNum != null) { eduClones = eduCopyNum }
 
-let copyEdu, copyCvEdu, copyEduInput, copyEduInputs 
+let copyEdu, copyCvEdu, copyEduInput, copyEduInputs
 
 addEduBtn.addEventListener("click", (e) => {
     eduClones++;
@@ -240,9 +233,9 @@ const cer = document.querySelector(".cer");
 const cvCer = document.querySelector(".cv-cer");
 const addCerBtn = document.querySelector("#add-certificates");
 let cerClones = 0;
-if (cerCopyNum != null) {cerClones = cerCopyNum}
+if (cerCopyNum != null) { cerClones = cerCopyNum }
 
-let copyCer, copyCvCer, copyCerInput, copyCerInputs 
+let copyCer, copyCvCer, copyCerInput, copyCerInputs
 
 addCerBtn.addEventListener("click", (e) => {
     cerClones++;
@@ -263,9 +256,9 @@ const sk = document.querySelector(".sk");
 const cvSk = document.querySelector(".cv-sk");
 const addSkBtn = document.querySelector("#add-skills");
 let skClones = 0;
-if (skCopyNum != null) {skClones = skCopyNum}
+if (skCopyNum != null) { skClones = skCopyNum }
 
-let copySk, copyCvSk, copySkInput, copySkInputs 
+let copySk, copyCvSk, copySkInput, copySkInputs
 
 addSkBtn.addEventListener("click", (e) => {
     skClones++;
@@ -284,9 +277,9 @@ const lang = document.querySelector(".lang");
 const cvLang = document.querySelector(".cv-lang");
 const addLangBtn = document.querySelector("#add-languages");
 let langClones = 0;
-if (langCopyNum != null) {langClones = langCopyNum}
+if (langCopyNum != null) { langClones = langCopyNum }
 
-let copyLang, copyCvLang, copyLangInput, copyLangInputs 
+let copyLang, copyCvLang, copyLangInput, copyLangInputs
 
 addLangBtn.addEventListener("click", (e) => {
     langClones++;
